@@ -1,0 +1,11 @@
+<nav id="nav">
+    <ul>
+        {{ range .Site.Menus.main }} 
+            {{ $icon := printf "<i data-feather=\"%s\"></i>" .Pre }}
+            {{ $text := print $icon " " .Name | safeHTML }}
+            <li>
+                <a class="nav-link" href="{{ .URL }}">{{ $text }}</a>
+            </li>
+        {{ end }}
+    </ul>
+</nav>

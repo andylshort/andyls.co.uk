@@ -1,0 +1,93 @@
+* {
+    font-family: Georgia, serif;
+    color: #373737;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    max-width: 80vw;
+}
+
+.main-header {
+    width: 100%;
+}
+.main-header * {
+    line-height: 4em;
+}
+
+.navigation-title {
+    font-weight: bold;
+}
+
+.main-header a, .main-header span {
+    display: inline;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    display: inline;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    float: left;
+    line-height: 2rem;
+}
+nav ul li:not(:last-child) {
+    margin-right: 1.5em;
+}
+
+a.nav-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+a.nav-link:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.6rem;
+}
+
+.post .title {
+    margin-bottom: 1rem;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    line-height: 1.25rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+footer, footer > * {
+    color: #a5a5a5 !important;
+    font-size: 13px;
+}
+footer span {
+    display: block;
+}

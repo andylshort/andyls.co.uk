@@ -1,0 +1,45 @@
+{{ define "main" }}
+<aside id="meta">
+    
+</aside>
+<section class="post">
+    <article id="content">
+        <header>
+            <div class="title">
+                <h2>{{ .Title }}</h2>
+            </div>
+            <div class="meta">
+                <section>
+                    <span>{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} Words</span>
+                    <h5 id="wordcount">  </h5>
+                </section>
+                {{ with .Params.topics }}
+                <ul id="topics">
+                    {{ range . }}
+                        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+                {{ with .Params.tags }}
+                <ul id="tags">
+                    {{ range . }}
+                        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+            <div class="other-posts">
+                {{ with .PrevInSection }}
+                    Previous Article: <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+                {{ end }}
+                {{ with .NextInSection }}
+                    Next Article: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+                {{ end }}
+            </div>
+        </header>
+        <div>
+            {{ .Content }}
+        </div>
+    </article>
+</section>
+{{ end }}

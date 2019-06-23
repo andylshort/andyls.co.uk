@@ -1,0 +1,18 @@
+baseURL = "https://www.andyls.co.uk/"
+languageCode = "en-gb"
+title = "Andrew Lamzed-Short"
+theme = "minimal"
+
+[permalinks]
+  blog = "/blog/:year/:month/:slug/"
+
+[menu]
+  [[menu.main]]
+  name = "About"
+  url = "/"
+  weight = 1
+
+  [[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 2
