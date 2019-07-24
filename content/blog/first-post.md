@@ -1,8 +1,11 @@
 ---
-title: "Test Post"
+title: "The Quintessential First Blog Post"
 date: 2019-06-08T15:54:49+01:00
 draft: true
-slug: "test-post"
+slug: "first-post"
+tags: ["testing", "markdown"]
+categories: ["Test", "Personal"]
+authors: ["Andrew Lamzed-Short"]
 ---
 
 ## Early thoughts

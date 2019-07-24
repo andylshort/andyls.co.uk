@@ -1,43 +1,27 @@
 {{ define "main" }}
-<aside id="meta">
-    
-</aside>
-<section id="main">
-    <article id="content">
-        <header>
-            <h2>{{ .Title }}</h2>
-            <div>
-                <section>
-                    <span>{{ .Date.Format "Jan 2, 2006" }} • {{ .WordCount }} Words</span>
-                    <h5 id="wordcount">  </h5>
-                </section>
-                {{ with .Params.topics }}
-                <ul id="topics">
-                    {{ range . }}
-                        <li><a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a> </li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-                {{ with .Params.tags }}
-                <ul id="tags">
-                    {{ range . }}
-                        <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-            </div>
-            <div>
-                {{ with .PrevInSection }}
-                    Previous Article: <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-                {{ end }}
-                {{ with .NextInSection }}
-                    Next Article: <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-                {{ end }}
-            </div>
-        </header>
+<article>
+    <header>
+        <h1>{{- .Title -}}</h1>
         <div>
-            {{ .Content }}
+            <section>
+                <span>{{ .PublishDate.Format "Jan 2, 2006" }} • {{ div .WordCount 250 }} mins</span>
+            </section>
+            {{ partial "categories.html" . }}
+            {{ partial "tags.html" . }}
         </div>
-    </article>
-</section>
+    </header>
+    <div>
+        {{ .Content }}
+    </div>
+    <footer>
+        <div>
+            {{ with .PrevInSection }}
+                Previous Article: <a class="previous" href="{{- .Permalink -}}"> {{.Title}}</a>
+            {{ end }}
+            {{ with .NextInSection }}
+                Next Article: <a class="next" href="{{- .Permalink -}}"> {{.Title}}</a>
+            {{ end }}
+        </div>
+    </footer>
+</article>
 {{ end }}

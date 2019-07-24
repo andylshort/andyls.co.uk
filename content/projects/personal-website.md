@@ -1,6 +1,11 @@
 ---
 title: "Personal Website"
-date: 2019-06-23T11:56:51+01:00
+year: 2019
 draft: true
+technologies: ["hugo", "sass", "html5", "javascript", "css3"]
 ---
 
+* Visual Studio Code
+* Hugo
+* Firefox
+* Sass

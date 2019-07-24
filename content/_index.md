@@ -1,7 +1,5 @@
 ---
 title: "About Me"
-date: 2019-07-20T10:38:07+01:00
-draft: true
 ---
 
 An Imperial College London graduate looking to build a smarter world and improve the lives of others one concise, considered solution at a time.

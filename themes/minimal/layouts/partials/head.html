@@ -1,15 +1,11 @@
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
 
-  {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-  {{ end -}}
+    {{- $style := resources.Get "main.scss" | toCSS | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-  {{ $css := "css/main.css" | absURL }}
-  <link rel="stylesheet" href="{{ $css }}">
-
-  {{ $title := print .Site.Title " | " .Title }}
-  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
-  <title>{{ $title }}</title>
+    {{- $title := print .Site.Title " | " .Title -}}
+    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    <title>{{- $title -}}</title>
 </head>

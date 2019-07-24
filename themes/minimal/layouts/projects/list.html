@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article>
+    <h1>{{- .Title -}}</h1>
+    {{ .Content }}
+
+    <ul class="pages">
+    <!-- Ranges through content/posts/*.md -->
+    {{ range sort .Pages ".Params.year" "desc" }}
+        <li>
+            <h2><a href="{{.Permalink}}">{{- .Title -}}</a></h2>
+            {{- .Params.year -}}
+            {{ with .Params.technologies }}
+            <div class="technologies">
+                Made with {{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}
+            </div>
+            {{ end }}
+        </li>
+    {{ end }}
+    </ul>
+</article>
+{{ end }}

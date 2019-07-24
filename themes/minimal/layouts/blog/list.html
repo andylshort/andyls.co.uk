@@ -1,16 +1,16 @@
 {{ define "main" }}
-<main>
-    <article>
-        <h1>{{.Title}}</h1>
-        {{.Content}}
-    </article>
-    <ul>
+<article>
+    <h1>{{- .Title -}}</h1>
+    {{.Content}}
+
+    <ul class="pages">
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
         <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+            <h2><a href="{{.Permalink}}">{{- .Title -}}</a></h2>
+            {{.Date.Format "2006-01-02"}}
         </li>
     {{ end }}
     </ul>
-</main>
+</article>
 {{ end }}

@@ -1,6 +1,7 @@
 ---
-title: "Brainfuck"
-date: 2019-06-23T11:56:37+01:00
+title: "Brainfuck Interpreter"
+year: 2014
 draft: true
+technologies: ["java"]
 ---
 
