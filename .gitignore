@@ -1,7 +1,6 @@
 # Hugo default output directory
 public/
 resources/
-*.scss_*
 
 # OSX
 .DS_Store
