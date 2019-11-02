@@ -7,8 +7,8 @@
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
         <li>
-            <h2><a href="{{.Permalink}}">{{- .Title -}}</a></h2>
-            {{.Date.Format "2006-01-02"}}
+            <h2><small>{{- if eq .Params.draft true -}}[Draft]{{- end -}}</small> <a href="{{.Permalink}}">{{- .Title -}}</a></h2>
+            <div class="date">{{.Date.Format "Jan 2, 2006" }}</div>
         </li>
     {{ end }}
     </ul>

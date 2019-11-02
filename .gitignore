@@ -1,12 +1,7 @@
 # Hugo default output directory
-/public
-
-## OS Files
-# Windows
-Thumbs.db
-ehthumbs.db
-Desktop.ini
-$RECYCLE.BIN/
+public/
+resources/
+*.scss_*
 
 # OSX
 .DS_Store

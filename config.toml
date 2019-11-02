@@ -1,7 +1,7 @@
 baseURL = "https://www.andyls.co.uk/"
 languageCode = "en-gb"
 title = "Andrew Lamzed-Short"
-theme = "minimal"
+theme = "andyls"
 
 [params]
   author = "Andrew Lamzed-Short"
@@ -29,8 +29,3 @@ theme = "minimal"
   name = "Projects"
   url = "/projects/"
   weight = 3
-
-  [[menu.main]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 4

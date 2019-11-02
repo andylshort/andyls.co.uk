@@ -1,5 +1,0 @@
-{{ with .Params.categories }}
-<div class="categories">
-    Under {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ "categories" | absURL }}{{ $e | urlize }}">{{ $e }}</a>{{ end }}
-</div>
-{{ end }}

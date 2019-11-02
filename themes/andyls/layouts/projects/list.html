@@ -8,7 +8,9 @@
     {{ range sort .Pages ".Params.year" "desc" }}
         <li>
             <h2><a href="{{.Permalink}}">{{- .Title -}}</a></h2>
-            {{- .Params.year -}}
+            <div class="date">
+                {{ .Params.year }} · <a href="{{- .Params.github -}}">View on GitHub</a>
+            </div>
             {{ with .Params.technologies }}
             <div class="technologies">
                 Made with {{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}

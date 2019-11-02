@@ -4,7 +4,6 @@ date: {{ .Date }}
 lastmod: {{ .Date }}
 tags: []
 categories: []
-authors: []
 
 draft: true
 ---

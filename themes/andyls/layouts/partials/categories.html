@@ -1,0 +1,3 @@
+{{ with .Params.categories }}
+Categorised as {{ range $i, $e := . }}{{ if $i }}, {{ end }}<a href="{{ "categories" | absURL }}{{ $e | urlize }}">{{ $e }}</a>{{ end }}
+{{ end }}

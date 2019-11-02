@@ -2,10 +2,26 @@
 title: "About Me"
 ---
 
-An Imperial College London graduate looking to build a smarter world and improve the lives of others one concise, considered solution at a time.
+A PhD research student at the University of Warwick as part of the 
+High-Performance Systems Group, supervised by 
+[Prof. Stephen Jarvis](https://warwick.ac.uk/fac/sci/dcs/people/stephen_jarvis/).
 
-Solving current problems by finding inventive new applications for bleeding-edge technology is my ambition and passion. I strive to learn new approaches, languages, technologies, and paradigms where and when possible whilst producing solutions that are functional, performant, elegant, as well as thoroughly planned, tested, and documented. If anything is worth doing, it's worth perfecting.
+Prior to this, I received a BEng Computing degree (First Class Honours) from
+Imperial College London, and an MSc Computer Science degree from the University of
+Warwick, as well as doing 2 years in industry, mostly with 
+[Lorax Compliance](https://www.loraxcompliance.com) as a Software Developer.
 
-Solid grounding in software engineering practices, patterns, paradigms. Most confident with C#, Java, and Python and libraries such as ASP.NET etc. View my LinkedIn profile or request a CV for a more detailed breakdown.
+Writing and programming are my main passions. [My blog](/blog/) contains (read: will contain)
+a lot of articles, technical and non-technical (viewed expressed in my blog are 
+entirely my own). Write-ups of personal and publicly available projects are also
+listed on my [projects page](/projects/).
 
-Work aside, I'm a keen PC gamer, writer, cyclist, and footballer.
+## Get in touch!
+
+If you want to contact me, know more about what I do, or anything else, there
+are several ways that we can get in touch:
+
+* via [LinkedIn](https://www.linkedin.com/in/andylshort)
+* see my [GitHub profile](https://www.github.com/andylshort)
+* [email me directly](mailto:hello@andyls.co.uk)
+* send me a message on [Twitter](https://www.twitter.com/andylshort)

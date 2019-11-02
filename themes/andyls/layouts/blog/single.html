@@ -1,14 +1,16 @@
 {{ define "main" }}
 <article>
     <header>
-        <h1>{{- .Title -}}</h1>
-        <div>
-            <section>
-                <span>{{ .PublishDate.Format "Jan 2, 2006" }} • {{ div .WordCount 250 }} mins</span>
-            </section>
-            {{ partial "categories.html" . }}
-            {{ partial "tags.html" . }}
-        </div>
+        <h1>{{- .Title -}}{{- if (eq .Draft "true") -}}[Draft]{{- end -}}</h1>
+        <span class="info">
+            {{ .PublishDate.Format "Jan 2, 2006" }} • {{ div .WordCount 250 }} mins •
+            {{- partial "categories.html" . -}}
+            <br />
+            {{- if not (eq .Lastmod .PublishDate) -}}
+            Last updated: {{ .Lastmod.Format "Jan 2, 2006" }}
+            {{- end -}}
+        </span>
+        {{ partial "tags.html" . }}
     </header>
     <div>
         {{ .Content }}
