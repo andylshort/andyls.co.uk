@@ -1,31 +1,56 @@
 baseURL = "https://www.andyls.co.uk/"
 languageCode = "en-gb"
 title = "Andrew Lamzed-Short"
-theme = "andyls"
+theme = "rocinante"
+paginate = 3
+
+pygmentsUseClasses=true
+pygmentsCodeFences=true
+
+# [taxonomies]
+#   category = "categories"
+#   tags = "tags"
+
+# [permalinks]
+#   blog = "/blog/:year/:month/:slug/"
+#   tags = "/tag/:slug/"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe= true
 
 [params]
-  author = "Andrew Lamzed-Short"
+  favicon = "/icons/favicon.png"
+  mainSections = ["posts"]
+  email = "hello@andyls.co.uk"
+  smart_email_link = ["Email"]
+  about = """
+About section. Enter details about you here.
+"""
 
-[taxonomies]
-  category = "categories"
-  tags = "tags"
+  [[params.links]]
+    [[params.links.link]]
+      name = "Resume"
+      href = "/Resume.pdf"
+    [[params.links.link]]
+      name = "Email"
+      href = "/contact"
+      smart_email_link = true
 
-[permalinks]
-  blog = "/blog/:year/:month/:slug/"
-  tags = "/tag/:slug/"
-
-[menu]
-  [[menu.main]]
-  name = "About"
-  url = "/"
-  weight = 1
-
-  [[menu.main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 2
-
-  [[menu.main]]
-  name = "Projects"
-  url = "/projects/"
-  weight = 3
+  [[params.links]]
+    [[params.links.link]]
+      name = "Github"
+      href = "https://www.github.com/andylshort"
+      new_tab = true
+    # [[params.links.link]]
+    #   name = "Mastodon"
+    #   href = "https://mastodon.social/"
+    #   new_tab = true
+    [[params.links.link]]
+      name = "Twitter"
+      href = "https://www.twitter.com/andylshort"
+      new_tab = true
+    [[params.links.link]]
+      name = "Instagram"
+      href = "https://www.linkedin.com/in/andy-l-short/"
+      new_tab = true

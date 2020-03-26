@@ -1,9 +1,0 @@
-{{ $taxonomy := "tags" }} <!-- Use the plural form here -->
-<ul id="{{ $taxonomy }}" class="tags">
-    {{ range .Param $taxonomy }}
-        {{ $name := . }}
-        {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy ($name | urlize)) }}
-            <li class="tag"><a href="{{ .Permalink }}">{{ $name }}</a></li>
-        {{ end }}
-    {{ end }}
-</ul>
