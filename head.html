@@ -1,0 +1,199 @@
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAj0lEQVRYhd3UUQ7AIAgDUC/t+bdfs83RWmEwEj+hL0Zpbaje+xFx2rWigqeQTwHwNYk1zfEOtiC5AN7hTwgJoPbVBihvpz5A3R21AdB6/S3ACl+ZUweAhrOzagDYcGZefgASwCJkAHNTEoD9XmgfDUCD0f6lb7izpoAIxC0vHcAL8pqzumjUY+rCANGQMfMEeJeWXQ5FT+EAAAAASUVORK5CYII=" rel="icon">
+
+
+${ if(highlighting-css) }
+  <style type="text/css">
+${ highlighting-css }
+  </style>
+${ endif }
+
+<style>
+    :root {
+        --font-size: 20px;
+        --font-size-code: 18px;
+        --font-size-footer: 16px;
+    }
+
+    html {
+        overflow-y: scroll;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .website-title {
+        font-weight: bold;
+        font-size: 24px;
+        font-variant: small-caps;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+    
+    nav ul li {
+        display: inline-block;
+    }
+    nav ul li:not(:first-child)::before {
+        content: " ∕ ";
+        padding: 0 8px;
+    }
+
+    h1, h2 {
+        font-variant: small-caps;
+    }
+
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    p {
+        line-height: 1.65;
+        margin: 0 0 32px 0;
+    }
+    
+    body {
+        font-family: Georgia, serif;
+        font-size: var(--font-size);
+        line-height: 1.5;
+
+        padding: 16px;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    .tags {
+        display: inline-block;
+        padding: 0 0 0 4px;
+        margin: 0;
+        list-style: none;
+    }
+    .tag {
+        display: inline-block;
+    }
+    .tag:first-child::before {
+        content: "Tagged under ";
+    }
+    .tag:not(:last-child)::after {
+        content: ", "
+    }
+
+    .post-title {
+        font: bold 48px Georgia, serif;
+        line-height: 1.1em;
+        margin-bottom: 8px;
+        font-variant: small-caps;
+    }
+
+    .post-subtitle {
+        margin: 8px 0;
+        color: #777777;
+        font-size: 24px;
+        line-height: 1em;
+        font-variant: small-caps;
+    }
+    .post-details {
+        font-variant: small-caps;
+        font-size: 0.85em;
+    }
+
+    article > header {
+        margin-bottom: 32px;
+    }
+    article > h2 {
+        margin-top: 45px;
+    }
+
+    em {
+        padding-left: 2px;
+    }
+
+    pre {
+        border: 1px solid #ccc;
+        background-color: #efefef;
+        padding: 8px;
+        font-size: var(--font-size-code);
+        font-family: monospace;
+    }
+    pre > code {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+    }
+
+    code {
+        padding: 6px 4px 4px 4px;
+        border: 1px solid #ccc;
+        background-color: #efefef;
+        font-size: var(--font-size-code);
+        font-family: monospace;
+    }
+
+    blockquote {
+        font-style:italic;
+    }
+
+    footer {
+        margin: 2em 0 1.5em 0;
+        text-align: center;
+        font-size: var(--font-size-footer);
+        color:rgba(0,0,0,0.33);
+    }
+
+    .blog-posts {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .blog-post {
+        flex: 0 0 45%;
+        min-width: 45%;
+
+        margin: 8px;
+        padding: 8px;
+    }
+    .draft {
+        background-color: rgba(255, 0, 0, 0.1);
+    }
+    .blog-post-title {
+        font-variant: small-caps;
+    }
+    .blog-post-subtitle {
+        font-variant: small-caps;
+        font-size: 0.8em;
+    }
+    .blog-post-date {
+        font-variant: small-caps;
+        font-size: 0.75em;
+    }
+
+    section.footnotes {
+        font-size: var(--font-size-code);
+    }
+
+    
+    /* @media (prefers-color-scheme: dark) {
+        * {
+            background-color: #151515;
+            color: #efefef;
+        }
+    } */
+
+    @media (max-width: 670px) {
+        .col:not(:last-child) {
+            border: 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+    }
+</style>

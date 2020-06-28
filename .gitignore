@@ -1,10 +1,5 @@
-# Hugo default output directory
+# Build directory
 public/
-resources/
 
-# OSX
-.DS_Store
-
-
-Ftp*
-.htaccess
+# Metadata gets programmatically generated
+metadata.yaml

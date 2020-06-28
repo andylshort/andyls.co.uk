@@ -31,9 +31,12 @@ bold text**.
 > 
 > Science science science
 
-```cpp
-int main()
-{
+test
 
+~~~cpp
+#include "test.h"
+int main(int argc, char* argv[])
+{
+    std::cout << "Hello world!" << std::endl;
 }
-```
+~~~
