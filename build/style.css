@@ -1,0 +1,351 @@
+/* Settings */
+:root {
+    --font-size: 18px;
+    --font-size-code: 14px;
+    --font-size-footer: 16px;
+
+    --color-bg: #ccc;
+    --color-heading: #82f0f0;
+    --color-text: #333;
+    --color-divider: #777;
+
+    --color-link-unvisited: teal;
+    --color-link-hover: orangered;
+    --color-link-active: orange;
+    --color-link-visited: indigo;
+
+    --color-code-bg: #efefef;
+    --color-code-border: #aaa;
+    --color-code-text: #333;
+
+    --page-width-max: 70ch;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: rgb(31, 31, 31);
+        --color-heading: #408f8f;
+        --color-text: #efefef;
+        --color-divider: #444;
+
+        --color-link-unvisited: teal;
+        --color-link-hover: orangered;
+        --color-link-active: orange;
+        --color-link-visited: plum;
+
+        --color-code-bg: #333;
+        --color-code-border: #151515;
+        --color-code-text: orange;
+    }
+}
+
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Generic*/
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-y: scroll;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.container {
+    max-width: var(--page-width-max);
+    margin: 0 auto;
+}
+
+#heading {
+    background-color: var(--color-heading);
+}
+
+nav {
+    min-height: 3.25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 2ch 1ch;
+}
+
+nav ul {
+    list-style: none;
+    margin-left: 2ch;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1ch;
+
+    color: white;
+    background-color: var(--color-link-unvisited);
+
+    font-variant: small-caps;
+}
+
+.website-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    text-shadow: 2px 2px 2px black;
+}
+
+#introduction {
+    padding: 0px 1ch;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 1.65;
+    margin: 0 0 2ch 0;
+}
+
+a {
+    color: var(--color-link-unvisited);
+}
+a:visited {
+    color: var(--color-link-visited);
+}
+a:hover{
+    color: var(--color-link-hover);
+}
+a:active {
+    color: var(--color-link-active);
+}
+
+em {
+    font-style: italic;
+}
+
+pre {
+    border: 1px solid var(--color-code-border);
+    background-color: var(--color-code-bg);
+    color: var(--color-code-text);
+    padding: 8px;
+    margin-bottom: 2ch;
+    font-size: var(--font-size-code);
+    font-family: monospace;
+    white-space: pre-line;
+}
+pre > code {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    text-shadow: none;
+    white-space: pre-wrap;
+}
+pre > code > span {
+    /* padding-left: 4ch; */
+}
+
+code {
+    /* padding: 6px 4px 4px 4px; */
+    padding: 0px 8px;
+    border: 1px solid var(--color-code-border);
+    background-color: var(--color-code-bg);
+    font-size: var(--font-size-code);
+    font-family: monospace;
+    color: var(--color-code-text);
+    border-radius: 4px;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+#website-footer {
+    /* margin: 2em 0 1.5em 0; */
+    text-align: center;
+    font-size: var(--font-size-footer);
+    color:rgba(0,0,0,0.33);
+
+    padding: 2ch 0;
+}
+
+#contact-details {
+    list-style: none;
+}
+
+#contact-details > li {
+    display: inline-block;
+}
+
+.draft {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+
+input[type="button"].tag-filter {
+    font-variant: small-caps;
+    border-radius: 0;
+    padding: 2px 6px;
+    display: inline-block;
+    background-color: teal;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 2px solid rgb(0, 77, 77);
+    color: var(--color-text);
+    margin-right: 3px;
+}
+input[type="button"].tag-filter:hover {
+    background-color: orangered;
+    cursor: pointer;
+    border-color: darkred;
+}
+input[type="button"].tag-filter:active {
+    background-color: orange;
+    cursor: pointer;
+    border-color: darkorange;
+}
+/* input[type="button"].tag-filter.selected {
+    background-color: green;
+} */
+
+.post {
+    padding: 2ch 0 0 0;
+    border-bottom: 1px solid var(--color-divider);
+}
+article.post > header {
+    margin-bottom: 2ch;
+}
+
+.post-title {
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 0.5ch;
+    line-height: 1.2em;
+}
+
+.post-date {
+    margin-bottom: 1ch;
+    font-size: 0.9em;
+    opacity: 75%;
+}
+
+.tags {
+    list-style: none;
+}
+.tag {
+    display: inline-block;
+    font-variant: small-caps;
+    font-weight: 700;
+}
+.tag:not(:last-child) {
+    margin-right: 8px;
+}
+
+.selected {
+    background-color: green !important;
+    border-color: yellow !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.post-info > span {
+    display: inline-block;
+    line-height: 1.5rem;
+    font-size: 1em;
+}
+.post-info > span:not(:last-child)::after {
+    content: " • ";
+}
+
+article > footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 0;
+    font-size: 0.8em;
+}
+
+#content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+
+@media (max-width: 670px) {
+    :root {
+        --page-width-max: 70ch;
+    }
+
+    .post {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1920px) {
+    :root {
+        --page-width-max: 120ch;
+    }
+
+    .post {
+        width: 48%;
+    }
+}

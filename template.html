@@ -1,0 +1,17 @@
+<article id="$post_index$" class="post" data-tags="{{post_tags}}">
+    <header>
+        <h1 class="post-title">$pagetitle$</h1>
+        <div class="post-date">$post_date$</div>
+        <ul class="tags">
+        $for(tags)$
+            <li class="tag">$tags$</li>
+        $endfor$
+        </ul>
+    </header>
+    <section>
+        $body$
+    </section>
+    <footer>
+        <a href="#top">Back to top</a>
+    </footer>
+</article>
