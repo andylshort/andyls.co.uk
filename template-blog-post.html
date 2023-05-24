@@ -8,6 +8,15 @@ ${template-header.html()}
         <article class="post">
             <header>
                 $if(title)$<h1 class="post-title">$title$</h1>$endif$
+                <div class="post-date">$publicationDate$</div>
+                $if(modificationDate)$
+                <div class="post-date">Last modified: $modificationDate$</div>
+                $endif$
+                <div>
+                    $for(tags)$
+                    <span>// <a href="/tags/$tags$/">$tags$</a> </span>
+                    $endfor$
+                </div>
             </header>
             <section>
                 $body$
