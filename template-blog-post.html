@@ -12,13 +12,13 @@ ${template-header.html()}
                 $if(modificationDate)$
                 <div class="post-date">Last modified: $modificationDate$</div>
                 $endif$
-                <div>
+                <ul class="tags">
                     $for(tags)$
-                    <span>// <a href="/tags/$tags$/">$tags$</a> </span>
+                    <li class="tag"><a href="/tags/$tags$/">$tags$</a></li>
                     $endfor$
-                </div>
+                </ul>
             </header>
-            <section>
+            <section class="body">
                 $body$
             </section>
         </article>

@@ -5,14 +5,20 @@ ${template-head.html()}
 ${template-header.html()}
 <main>
     <div class="container">
-        <article class="post">
+        <section>
             <header>
                 $if(title)$<h1 class="post-title">$title$</h1>$endif$
             </header>
-            <section>
-                $body$
-            </section>
-        </article>
+            $if(preamble)$
+            $preamble$
+            $endif$
+        </section>
+        $body$
+        <section>
+            $if(postamble)$
+            $postamble$
+            $endif$
+        </section>
     </div>
 </main>
 ${template-footer.html()}

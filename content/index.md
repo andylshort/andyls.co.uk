@@ -7,4 +7,4 @@ pagetitle: "Andrew Lamzed-Short"
 
 Hello! I'm Andrew. Currently, I'm a final year PhD student studying High Performance Computing at the University of Warwick in the UK. [Learn more about me](/about-me).
 
-# Recent Blog Posts
+## Recent Blog Posts
